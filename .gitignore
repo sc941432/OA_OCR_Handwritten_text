@@ -1,0 +1,97 @@
+# Python and Django
+*.pyc
+*.pyo
+__pycache__/
+*.pyd
+*.env
+*.venv
+*.egg
+*.egg-info
+dist/
+build/
+*.db
+*.sqlite3
+
+# Django static and media files
+/static/
+!/static/css/styles.css
+!/static/js/script.js
+/media/
+
+# Logs and other temporary files
+*.log
+*.pot
+*.mo
+*.swp
+*.swo
+*.swn
+*~
+*.bak
+*.tmp
+*.old
+
+# Django local settings
+local_settings.py
+.env
+
+# VS Code and IDE files
+.vscode/
+.idea/
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.lib/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Translations
+*.mo
+*.pot
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Image files
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Model files
+*.h5
+*.model
+
+# Google credentials
+vision.json
+
+# Processed images
+/processed_images/
