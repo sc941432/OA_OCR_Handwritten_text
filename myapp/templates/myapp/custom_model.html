@@ -1,0 +1,64 @@
+<!-- myapp/templates/myapp/custom_model.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Model Text Detection</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Custom Model Text Detection</h1>
+    </header>
+    <main>
+        <div class="container">
+            <section class="upload-section">
+                <h2>Upload an Image</h2>
+                <form method="POST" enctype="multipart/form-data" class="upload-form">
+                    {% csrf_token %}
+                    <input type="file" name="image_upload" accept="image/*" required>
+                    <button type="submit" class="upload-button"><i class="fas fa-upload"></i> Upload Image</button>
+                </form>
+            </section>
+
+            <section class="select-section">
+                <h2>Select an Image for Text Detection</h2>
+                <form method="GET" class="select-form">
+                    <select name="selected_image" class="image-select">
+                        <option value="" disabled selected>Select an image</option>
+                        {% for image in available_images %}
+                        <option value="{{ image }}" {% if image == selected_image %}selected{% endif %}>{{ image }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" class="detect-button"><i class="fas fa-search"></i> Detect Text</button>
+                </form>
+            </section>
+
+            {% if processed_image_base64 %}
+            <section class="image-section">
+                <h2>Processed Image</h2>
+                <img id="processed-image" src="data:image/jpeg;base64,{{ processed_image_base64 }}" alt="Processed Image" />
+            </section>
+            {% endif %}
+
+            {% if detected_text %}
+            <section class="text-section">
+                <h2>Detected Text</h2>
+                <pre id="detected-text">{{ detected_text }}</pre>
+            </section>
+            {% endif %}
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Django Site</p>
+    </footer>
+</body>
+
+</html>

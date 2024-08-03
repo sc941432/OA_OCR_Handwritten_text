@@ -1,0 +1,141 @@
+/* static/css/styles.css */
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styles */
+.upload-section,
+.select-section,
+.image-section,
+.text-section,
+.model-selection {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4CAF50;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Form Styles */
+.upload-form,
+.select-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="file"],
+.image-select {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+    transition: border-color 0.3s;
+}
+
+input[type="file"]:hover,
+.image-select:hover {
+    border-color: #4CAF50;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.upload-button,
+.detect-button,
+.select-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-button i,
+.detect-button i,
+.select-button i {
+    margin-right: 8px;
+}
+
+/* Radio Button Styles */
+.radio-container {
+    margin-bottom: 15px;
+}
+
+.radio-container input[type="radio"] {
+    margin-right: 10px;
+}
+
+.radio-container label {
+    font-size: 18px;
+}
+
+/* Image and Text Display */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}

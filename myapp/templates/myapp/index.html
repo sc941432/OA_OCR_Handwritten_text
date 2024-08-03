@@ -1,0 +1,177 @@
+<!-- myapp/templates/myapp/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Detection Model Selection</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="{% static 'js/script.js' %}"></script>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: grey;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .model-selection {
+            margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        .radio-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+            transition: background-color 0.3s, border-color 0.3s;
+            border-radius: 5px;
+            padding: 10px;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .radio-container:hover {
+            background-color: #e6f3ff;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"]:checked + label {
+            background-color: #0056b3;
+            color: #ffffff;
+            border-color: #0056b3;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        label {
+            font-size: 1.2rem;
+            color: #333333;
+            margin-left: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        label i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+            color: #0056b3;
+            transition: color 0.3s;
+        }
+
+        input[type="radio"]:checked + label i {
+            color: #ffffff;
+        }
+
+        .select-button {
+            background-color: #0056b3;
+            color: #ffffff;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .select-button:hover {
+            background-color: #004494;
+        }
+
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Choose Text Detection Model</h1>
+    </header>
+    <main>
+        <div class="container">
+            <section class="model-selection">
+                <h2>Select a Model</h2>
+                <form method="GET" action="">
+                    <div class="radio-container">
+                        <input type="radio" id="google" name="model" value="google" checked>
+                        <label for="google">
+                            <i class="fab fa-google"></i> Google Vision API
+                        </label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="custom" name="model" value="custom">
+                        <label for="custom">
+                            <i class="fas fa-brain"></i> Custom Trained Model
+                        </label>
+                    </div>
+                    <button type="submit" class="select-button">
+                        <i class="fas fa-check-circle"></i> Proceed
+                    </button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Django Site</p>
+    </footer>
+</body>
+
+</html>
