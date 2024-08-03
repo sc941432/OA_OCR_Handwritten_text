@@ -14,5 +14,13 @@ This project is a Django-based Optical Character Recognition (OCR) application u
 The project is organized as follows:
 
 ## Screenshots
+screenshot1:
 ![Screenshot 1](./Report/Screenshot%202024-08-04%20011227.png)
+screenshot2:
+![Screenshot 2](./Report/Screenshot%202024-08-04%20011248.png)
+screenshot3:
+![Screenshot 3](./Report/Screenshot%202024-08-04%20011635.png)
+screenshot4:
+![Screenshot 4](./Report/Screenshot%202024-08-04%20011647.png)
+
 
